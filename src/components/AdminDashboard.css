@@ -1,0 +1,85 @@
+/* src/components/AdminDashboard.css */
+.admin-dashboard {
+  font-family: "Segoe UI", sans-serif;
+  min-height: 100vh; 
+  background-color: #fcfcf4; 
+}
+
+.admin-header {
+  background-color: #2c3e50; 
+  padding: 20px 30px;
+  color: white;
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+}
+
+.admin-header h1 {
+  margin: 0;
+  font-size: 28px; 
+  font-weight: 600;
+  color: #ecf0f1; 
+}
+
+.admin-nav {
+  display: flex;
+  gap: 16px; 
+  align-items: center; 
+}
+
+.admin-link {
+  color: #d0d6db;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 16px; 
+  border-radius: 30px; 
+  transition: background-color 0.3s ease;
+}
+
+.admin-link:hover {
+  background-color: rgba(255, 255, 255, 0.1); 
+  color: #fff;
+}
+
+.admin-link.active {
+  background-color: #3498db; 
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.admin-link.my-meal {
+  order: -1;
+}
+
+.nav-separator {
+  color: #95a5a6; 
+  font-size: 1.5em; 
+  margin: 0 8px; 
+}
+
+.admin-main {
+  padding: 30px;
+  background-color: #f9f9f9; 
+  min-height: calc(100vh - 60px); 
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05); 
+}
+
+@media (max-width: 768px) {
+  .admin-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .admin-nav {
+    margin-top: 15px;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center; 
+  }
+
+  .nav-separator {
+    display: none; 
+  }
+}

@@ -1,0 +1,38 @@
+.deviation-prompt {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 400px;
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  border-radius: 12px;
+}
+
+.deviation-prompt h3 {
+  color: #856404;
+  margin-bottom: 10px;
+}
+
+.deviation-prompt select {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.deviation-prompt button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ffc107;
+  border: none;
+  color: #212529;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.deviation-prompt button:disabled {
+  background-color: #ffe082;
+  cursor: not-allowed;
+}

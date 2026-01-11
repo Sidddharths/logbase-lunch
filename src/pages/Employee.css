@@ -1,0 +1,11 @@
+.employee-page {
+  text-align: center;
+}
+
+.food-icons-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  
+}

@@ -1,0 +1,63 @@
+/* src/components/Navbar.css */
+.navbar {
+  
+  background: #333;
+  padding: 15px 20px; 
+  display: flex; 
+  align-items: center; 
+ 
+  
+}
+
+.navbar h2 {
+  flex-grow: 1; 
+  text-align: center; 
+  margin: 0; 
+  font-size: 1.8rem; 
+  color: #fcfcf4;
+  
+  
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem; /* Slightly increased gap for better readability */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent; /* Initially transparent border */
+  transition: border-bottom 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  border-bottom-color: white; /* Border becomes visible on hover */
+}
+
+.navbar ul li:last-child {
+  margin-left: auto; /* Push the last item (Logout) to the right if needed */
+}
+
+.navbar ul li:not(:last-child) {
+  margin-right: 0; /* Reset right margin for other list items */
+}
+
+.navbar ul li:first-child {
+  margin-left: 0; /* Reset left margin for the first list item */
+}
+
+.logout-btn {
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+  color: rgb(255, 0, 0);
+  font-weight: 400;
+  text-decoration: underline;
+  
+  
+}

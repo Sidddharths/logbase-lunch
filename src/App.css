@@ -1,3 +1,14 @@
+html,
+body,
+#root {
+  background-color: #fcfcf4;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
 .App {
   text-align: center;
 }

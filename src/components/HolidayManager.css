@@ -1,0 +1,269 @@
+/* src/components/HolidayManager.css */
+.holiday-manager {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px;
+  color: #202223;
+}
+
+.header {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #202223;
+}
+
+
+
+.header p {
+  font-size: 16px;
+  color: #6d7175;
+}
+
+.calendar-container {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.calendar-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.month-display {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  color: #202223;
+}
+
+.button {
+  background: #008060;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 15px;
+}
+
+.button1 {
+  background: #2b32bc;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.button:hover {
+  background: #006e52;
+}
+.button1:hover {
+  border-radius: 0px;
+  transition: ease 0.2s;
+}
+
+
+.button.secondary {
+  background: transparent;
+  color: #000000;
+  border: 1px solid #008060;
+  
+}
+
+.button.secondary:hover {
+  background: #f0f7f5;
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 12px;
+  text-align: center;
+  font-weight: 500;
+  color: #6d7175;
+}
+
+.weekday {
+  padding: 8px;
+  font-size: 14px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.calendar-day {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e1e3e5;
+}
+
+.calendar-day:hover {
+  background: #f6f6f7;
+  transform: translateY(-2px);
+}
+
+.calendar-day.empty {
+  background: transparent;
+  border: none;
+  cursor: default;
+}
+
+.calendar-day.today {
+  border-color: #008060;
+  border-width: 2.4px;
+}
+
+.calendar-day.weekend {
+  background: #f9fafb;
+  color: #6d7175;
+}
+
+.calendar-day.holiday {
+  background: #fdf4f4;
+  color: #d82c0d;
+}
+
+.day-number {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.holiday-indicator {
+  position: absolute;
+  bottom: 4px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #d82c0d;
+}
+
+.calendar-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.holiday-list {
+  margin-top: 24px;
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 8px;
+}
+
+.holiday-list h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.holiday-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.holiday-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid #e1e3e5;
+}
+
+.holiday-list li:last-child {
+  border-bottom: none;
+}
+.holiday-manager .range-selector {
+  margin: 30px 0;
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 8px;
+  
+}
+
+.holiday-manager .date-inputs {
+  display: flex;
+  gap: 16px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.holiday-manager .date-inputs label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  color: #6d7175;
+  min-width: 150px;
+}
+
+.holiday-manager .date-inputs input {
+  padding: 8px 16px;
+  border: 1px solid #e1e3e5;
+  border-radius: 20px;
+  font-family: inherit;
+  height: 18px; 
+}
+
+
+.holiday-manager .legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 24px 0 0;
+  padding: 16px 0;
+  border-top: 1px solid #e1e3e5;
+  
+}
+
+.holiday-manager .legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  background: #f9fafb;
+  border-radius: 4px;
+}
+
+.holiday-manager .legend-box {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+
+
+/* Add this for better button alignment in range selector */
+.holiday-manager .date-inputs button {
+  height: 36px;
+}

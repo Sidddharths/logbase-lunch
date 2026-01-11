@@ -1,0 +1,300 @@
+/* DefaultMealSelector.css */
+
+.default-meal-selector {
+    background: #fdfdfd;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    max-width: 650px;
+    margin: 32px auto;
+    transition: all 0.3s ease;
+    
+    background-color: rgba(253, 253, 253, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+
+.default-meal-selector h2 {
+    
+    font-size: 2.2rem;
+    margin: 24px 0 0 0; 
+    margin-top: -10px;
+    color: #222;
+    
+    /* text-align: center; */
+    font-weight: 500;
+    letter-spacing: -0.02em;
+}
+
+.default-meal-selector .date {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 3px;
+    margin-bottom: 38px; /* Increased margin */
+    /* text-align: center; */
+}
+
+.default-meal-selector .section {
+    margin-bottom: 38px;
+    
+}
+
+.default-meal-selector .section-label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.default-meal-selector select {
+    width: 100%;
+    padding: 14px;
+    border-radius: 14px;
+    border: 1px solid #ddd;
+    font-size: 1.1rem;
+    transition: all 0.2s ease;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+    background-color: #fff;
+    color: #666;
+}
+
+
+select:hover {
+    outline: none;
+    border-color: #4299e1;
+    
+}
+select:focus{
+    border-color: #4299e1;
+    border-width: 1px;
+    color: #414141;
+}
+
+ .radio-group {
+    display: flex;
+    gap: 24px;
+    margin-top: 12px;
+}
+
+ .radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Increased gap */
+    font-size: 1.1rem;
+    color: #666;
+    cursor: pointer; /* Add cursor pointer for better UX */
+}
+
+ .radio-group input[type="radio"] {
+    position: relative; /* Allows for absolute positioning of the custom indicator */
+    width: 20px; /* Increased size of the radio button */
+    height: 20px;
+    appearance: none; /* Hide the default radio button */
+    border: 2px solid #ddd; /* Style the border */
+    border-radius: 50%; /* Make it round */
+    outline: none; /* Remove default outline */
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+ .radio-group input[type="radio"]:hover {
+    border-color: #3498db; /* Change border color on hover */
+}
+
+.radio-group input[type="radio"]:checked {
+    border-color: #3498db; /* Keep the border color when checked */
+}
+
+
+ .radio-group input[type="radio"]:checked::before {
+    content: ''; /* Create a pseudo-element for the filled circle */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px; /* Size of the filled circle */
+    height: 12px;
+    background-color: #3498db; /* Fill color */
+    border-radius: 50%; /* Make it a circle */
+    opacity: 0;
+    animation: fadeInRadio 0.2s ease forwards;
+}
+
+@keyframes fadeInRadio {
+    from { opacity: 0; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+
+.addons .stepper {
+    display: flex; /* Make stepper a flex container */
+    align-items: center;
+    gap: 16px;
+    margin: 16px 0;
+    justify-content: space-between; /* Space out label and buttons */
+}
+
+.addons .stepper > span:first-child {
+    flex: 1; /* Give the label some space */
+    margin-right: 16px; /* Add margin to the label */
+    text-align: left;  /* Re-align label text to left */
+}
+
+
+.stepper button {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    font-weight: bold;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stepper button:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+.stepper button:active {
+    background-color: #d0d0d0;
+    transform: scale(0.95);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.stepper span {
+    font-size: 1.03rem;
+    min-width: 48px;
+    display: inline-block;
+    text-align: center;
+    color: #545454;
+    font-weight: 500;
+}
+
+.save-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 14px 24px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+    margin-top: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+    font-weight: 600;
+}
+
+.save-btn:hover {
+    /* background-color: #2980b9; */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.save-btn:active {
+    background-color: #217dbb;
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.save-btn:disabled {
+    background-color: #bdc3c7;
+    color: #fff;
+    cursor: not-allowed;
+    opacity: 0.8;
+    box-shadow: none;
+    transform: none;
+}
+
+.save-btn:disabled:hover {
+    background-color: #bdc3c7;
+    transform: none;
+    box-shadow: none;
+}
+
+
+
+.meal-type-box .section-label {
+    margin-bottom: 16px;
+}
+
+.meal-type-box {
+  
+  margin: 32px auto;
+  max-width: 650px;
+
+  background: #f8f8f8;
+  padding: 20px 24px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  border: 1px solid #eee;
+  background-color: rgba(253, 253, 253, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.section-label {
+
+  font-size: 1.2rem;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.radio-group {
+  display: flex;
+  gap: 40px;
+}
+
+.meal-type-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin-bottom:10px ;
+  margin-right:-10px ;
+}
+
+.tooltip-icon {
+  font-size: 30px;
+  font-weight: 650;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 220px;
+  background-color: #787878;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 8px 10px;
+  position: absolute;
+  z-index: 1;
+  top: 25px;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.4s;
+  font-size: 13px;
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}

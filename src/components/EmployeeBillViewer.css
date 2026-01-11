@@ -1,0 +1,356 @@
+/* EmployeeBillViewer.css */
+
+.employee-bill-viewer {
+  
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #333;
+}
+
+.header {
+  color: #333;
+  width:100%;
+  text-align: left;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+
+.content-container {
+  display: flex;
+  gap: 30px;
+}
+
+.employee-list-container {
+  flex: 1;
+  min-width: 250px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  height: fit-content;
+}
+
+.search-container {
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 90%;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: border 0.3s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #3f51b5;
+  box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.2);
+}
+
+.sub-header {
+  color: #555;
+  font-size: 18px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.employee-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.employee-item {
+  padding: 12px 15px;
+  border-radius:0 6px 6px 0;
+  margin-bottom: 8px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.2s;
+}
+
+.employee-item:hover {
+  background-color: #f5f5f5;
+}
+
+.employee-item.selected {
+  background-color: #e3f2fd;
+  border-left: 3px solid #3f51b5;
+}
+
+.employee-name {
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+.employee-department {
+  font-size: 12px;
+  color: #666;
+}
+
+.bill-details-container {
+  flex: 3;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.employee-header h3 {
+  color: #3f51b5;
+  margin-top: 0;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.month-selector {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.month-tab {
+  padding: 8px 15px;
+  background: #f5f5f5;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.month-tab:hover {
+  background: #e0e0e0;
+}
+
+.month-tab.active {
+  background: #3f51b5;
+  color: white;
+}
+
+.bill-month-header {
+  color: #555;
+  font-size: 18px;
+  margin: 20px 0 15px;
+}
+
+.bill-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.bill-table th {
+  text-align: left;
+  padding: 12px 15px;
+  background: #f5f5f5;
+  color: #555;
+  font-weight: 500;
+}
+
+.bill-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.bill-table tr:last-child td {
+  border-bottom: none;
+}
+
+.total-row {
+  font-weight: 500;
+  background: #f9f9f9;
+}
+
+.total-row td {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.loading {
+  padding: 20px;
+  text-align: center;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+  }
+  
+  .employee-list-container {
+    min-width: auto;
+  }
+}
+
+/* Month End Summary Button */
+.month-end-summary-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 12px 20px;
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+  z-index: 100;
+}
+
+.month-end-summary-button:hover {
+  background-color: #303f9f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Summary Modal */
+.summary-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.summary-modal-content {
+  background-color: white;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 900px;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.summary-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.summary-modal-header h3 {
+  margin: 0;
+  color: #3f51b5;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  padding: 5px;
+}
+
+.close-button:hover {
+  color: #333;
+}
+
+.summary-modal-body {
+  padding: 10px;
+}
+
+.employee-summary {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+.employee-summary:last-child {
+  border-bottom: none;
+}
+
+.employee-summary-name {
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.summary-table {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.month-total {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 2px solid #3f51b5;
+  text-align: right;
+  font-size: 18px;
+  color: #3f51b5;
+}
+
+.month-total h4 {
+  margin: 0;
+}
+
+.summary-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* semi-transparent */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999; /* above everything */
+}
+
+/* Modal content box */
+.summary-modal-content {
+  background: white;
+  width: 90%;
+  max-height: 90%;
+  overflow-y: auto;
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+}
+
+/* Prevent scrolling of body when modal is open */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Header and close button */
+.summary-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Optional: give modal scrollbars a better look */
+.summary-modal-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.summary-modal-content::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}

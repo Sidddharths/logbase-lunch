@@ -1,0 +1,32 @@
+/* EmployeeDashboard.css */
+
+.viewBillButton {
+  margin-top: 20px; /* Increased margin to separate from DefaultMealSelector */
+  padding: 12px 24px; /* Slightly increased padding for better touch area */
+  font-size: 18px; /* Slightly increased font size for better readability */
+  background-color: #2ecc71; /* Keep the blue color */
+  color: white;
+  border: none;
+  border-radius: 12px; /* Slightly more rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease; /* Added box-shadow and transform */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
+  position: fixed; 
+  bottom: 20px; /* Distance from the bottom */
+  left: 20px; /* Distance from the right */
+  z-index: 10;
+}
+
+.viewBillButton:hover {
+  transform: scale(1.07); /* Darker blue on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
+  
+}
+
+.viewBillButton:active {
+  
+  
+  background-color: #d0d0d0;
+    transform: scale(0.95);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
